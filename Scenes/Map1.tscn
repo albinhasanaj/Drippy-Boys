@@ -1,3 +1,65 @@
-[gd_scene format=3 uid="uid://dos8qo3dj3c17"]
+[gd_scene load_steps=6 format=3 uid="uid://dos8qo3dj3c17"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4rqpe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pugwf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_na0wf"]
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_3ba4h"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_4a15s"]
 
 [node name="Map1" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.46949, 0, 0, 0, 1, 0, 0, 0, 0.550788, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4rqpe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(2.00166, 0, 0, 0, 0.0202181, 0, 0, 0, 1.97959, 0, 0, 0)
+shape = SubResource("BoxShape3D_pugwf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.46949, 0, 0, 0, 1, 0, 0, 0, 0.550788, 0, 0, 1.5)
+mesh = SubResource("PlaneMesh_4rqpe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1.94728, 0, 0, 0, 0.0147985, 0, 0, 0, 1.98958, 0, 0, 0)
+shape = SubResource("BoxShape3D_na0wf")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.46949, 0, 0, 0, 1, 0, 0, 0, 0.550788, -0.00362623, -0.00320125, 3.05259)
+mesh = SubResource("PlaneMesh_4rqpe")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.46949, 0, 0, 0, 1, 0, 0, 0, 0.550788, -0.0102972, -0.00320125, 5.35206)
+mesh = SubResource("PlaneMesh_4rqpe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.46949, 0, 0, 0, 1, 0, 0, 0, 0.550788, -0.0139148, 0.471943, 3.05323)
+mesh = SubResource("TubeTrailMesh_3ba4h")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.147265, 0, 0, 0, 1.91861, 0, 0, 0, 0.171237, -0.0139148, 0.855666, 4.89699)
+mesh = SubResource("TubeTrailMesh_3ba4h")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.147265, 0, 0, 0, 1.91861, 0, 0, 0, 0.171237, -0.0139148, 0.855666, 5.83879)
+mesh = SubResource("TubeTrailMesh_3ba4h")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.147265, 0, 0, 0, -8.38652e-08, -0.171237, 0, 1.91861, -7.48499e-09, -0.00971127, 1.73981, 5.39158)
+mesh = SubResource("TubeTrailMesh_3ba4h")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.141289, 0.45916, -3.63798e-12, 0.0415217, -1.56219, -0.000219372, -0.000503684, 0.0189504, -0.0180841, 0.173504, 1.18786, 5.3661)
+mesh = SubResource("TubeTrailMesh_3ba4h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D9"]
+transform = Transform3D(0.958247, 0, 0, 0, 0.278939, 0, 0, 0, 32.7691, 0, 0.455607, -4.35601e-08)
+mesh = SubResource("SphereMesh_4a15s")
