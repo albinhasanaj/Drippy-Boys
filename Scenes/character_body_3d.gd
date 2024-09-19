@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = -0.5
+const SPEED = -0.75
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.0005
 
@@ -20,13 +20,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = 0
 
-	# Handle jumping.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
 	direction = Vector3.ZERO
 	if Input.is_action_pressed("walk"):
 		direction -= transform.basis.z.normalized()
+		
+	if Input.is_action_just_released("jump"):
+		velocity.y = 4
+		
 
 	# Apply movement in the forward direction.
 	velocity.x = direction.x * SPEED
