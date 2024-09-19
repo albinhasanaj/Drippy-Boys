@@ -1,0 +1,12 @@
+# Godot-specific files
+.import/
+.godot/
+export.cfg
+export_presets.cfg
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build directories
+bin/
